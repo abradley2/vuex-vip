@@ -14,16 +14,16 @@ is to save your store's state between reloads. This module does exactly that.
 There are already some nice modules for persistence with Vue, however this is
 _:sparkles: da best ever becuz :sparkles:_:
 
-**Tiny!**
+**Tiny!**  
 This module has only one small utility funciton as a dependency, and
 the total size after minification is < 5kb!
 
-**Performant**
+**Performant**  
 Persistence writes are bottlenecked so they only happen 250ms after store commits
 have ended (If the store is being continually mutated for 7 seconds, the write will
 take place at 7.25 seconds).
 
-**Smart state-reloading**
+**Smart state-reloading**  
 It is super annoying when persistence reloads old state
 even though you've changed what initial state a store will have. VIP will
 automatically refresh your reloaded state instead of overwriting if it detects
