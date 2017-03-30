@@ -1,4 +1,4 @@
-=# Vuex-VIP
+# Vuex-VIP
 
 Vuex IndexedDB Persistence
 
