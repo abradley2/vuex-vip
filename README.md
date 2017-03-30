@@ -52,8 +52,8 @@ vip(storeConfig)
   .then(function () {
     const vm = new Vue({
       storeConfig,
-      template: ..,
-      methods: …
+      template: ...,
+      methods: ...
     })
 
     vm.$mount('#app')
