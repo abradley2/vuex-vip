@@ -12,7 +12,7 @@
     "url": "git+https://github.com/abradley2/vuex-indexeddb-persist.git"
   },
   "author": "Tony Bradley",
-  "license": "MIT",
+  "license": "The Unlicense",
   "bugs": {
     "url": "https://github.com/abradley2/vuex-indexeddb-persist/issues"
   },

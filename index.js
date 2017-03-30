@@ -161,6 +161,7 @@ function storeTransaction (db, objectStore, transactionType, ...args) {
 function getStateMap (states) {
   return states.reduce(function (acc, cur) {
     acc[cur.__namespace__] = cur
+    return acc
   }, {})
 }
 
