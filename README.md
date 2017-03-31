@@ -46,12 +46,21 @@ Vue.use(Vuex)
 Wrap your Vuex store configuration
 
 ```
+const Vue = require('vue')
+const Vuex = require('vuex')
+
+Vue.use(Vuex)
+
+// your store configuration,
+// with state, getters, actions, mutations, modules, etc
 const storeConfig = {..}
 
+// call vip, which wraps your store so state is persisted. This returns a promise.
 vip(storeConfig)
   .then(function () {
+    // now initialize your application as you normally would
     const vm = new Vue({
-      storeConfig,
+      store: new Vuex.store(storeConfig),
       template: ...,
       methods: ...
     })
@@ -64,7 +73,7 @@ IndexedDB reads are asynchronous, so it is recommended you wrap your app-start
 in the `then` block of the returned promise. This is a very fast
 read and the time added to startup is negligible.
 
-**Important**
+**Important**  
 VIP requires an environment with Promise support currently. If `window.Promise` is
 available, it will use that. Otherwise, you can pass in whatever [Promise polyfill](https://www.npmjs.com/package/es6-promise)
 you are using as the _third_ argument to initialization (after your database version
