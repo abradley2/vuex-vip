@@ -46,11 +46,6 @@ Vue.use(Vuex)
 Wrap your Vuex store configuration
 
 ```
-const Vue = require('vue')
-const Vuex = require('vuex')
-
-Vue.use(Vuex)
-
 // your store configuration,
 // with state, getters, actions, mutations, modules, etc
 const storeConfig = {..}
